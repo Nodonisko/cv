@@ -1,0 +1,99 @@
+$blue: #1f7e9a
+
+body
+  font-family: "Lato", Helvetica, Arial, sans-serif
+
+.cv-header
+  margin-top: 25px
+
+  .brand
+    position: relative
+
+    $fontSize: 150px
+    $fromRight: -100px
+    $width: 30px
+    &:after, &:before
+      display: none
+      position: absolute
+      right: -40px
+      top: 0
+      height: 100%
+      width: $width
+      content: '}'
+      font-size: $fontSize
+      line-height: $fontSize - ($fontSize/6)
+      font-family: sans-serif
+      font-weight: 300
+
+    &:before
+      right: $width * -2.5
+      color: $blue
+
+  .name
+    border-bottom: 6px solid $blue
+    display: inline-block
+    padding-bottom: 10px
+
+  .short-description
+    font-size: 1.2rem
+
+  .curly
+    $fontSize: 150px
+    font-size: $fontSize
+    font-weight: 300
+    line-height: 3rem
+    letter-spacing: -20px
+
+  .blue
+    color: $blue
+
+.cv-section
+  margin-top: 35px
+
+  .section-title
+    position: relative
+    padding-bottom: 10px
+    margin-bottom: 20px
+
+    &:after
+      border-bottom: 4px solid $blue
+      bottom: 0
+      left: 0px
+      width: 85px
+      content: ""
+      position: absolute
+
+  dd
+    font-size: 1.15rem
+
+  .skill-checklist
+    $fontSize: 1.15rem
+    font-size: $fontSize
+    list-style: none
+
+    li
+      position: relative
+      margin-bottom: 10px
+
+      &:before
+        content: ""
+        width: 22px
+        height: 22px
+        left: -30px
+        top: 2px
+        position: absolute
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAD6UlEQVR4nO3dT4scRQCG8ce2XTzloDn4IfwgEjwECUGChCUEWUIIISwhSAiEIBKCBBHxFET8FB7Fg/gpPIjklhAlDMMwWQ+1TZbd2ZntmfrXPc8Pihy3qt+3M7O1NT0gSZIkSZIkSZIkSZIkSZIkSZIkSZKG5N3SE9hyDfAh8BHwHjABDorOSFk0wKfAb8ArQvD/AX8CV4C23NSUWgt8A8wId/vxMQeeAe+XmqDSaYEnhJAXhX90/IIlGJU+4XfjZyzBKDTAY/qFbwlGoiG85q8TviUYuBjhd+MnLMGgNMDXxAnfEgxMivCPlmAn31LUVwM8Ik343XiGJahSAzwkbfjd+O7w56kSDfCAPOEfEHYSP8myMq2UO/xu/JpjcVquAe5z+t5+yvEyw/q0RMnwu5cBFdIAX1Eu/APgn+Sr1EINcI+y4R8QtoiVWS3hvwI+TrxWHdMAdykf/hS4mnitOqaWO38KXE+8Vi1Qy51v+AXsY/hRnAc+I9xN+8AF4FzRGa12hzrC/zL1QlNqgD3gOScX9xdwudzUlrpNHeHvpV5oSt0x6GX75FPgVqkJnsLwI+hzJGoK3CwzzRMMP4J1zsNNgRslJnuE4UewyZGokiW4RR3hl74JNhLjPFyJi3Dz8Oca/gZiHobM+d+g4UeQ4jBkjs2PG9QRfi1vgNeS8iRsyhLsUUf4tf0K3EuOk7BT4FrkedcQ/oyBhw8hmBzvnCfAbqQ5X6eO8G9HWk8x54G/yXfRJmz+d3DDj+gy+S/eJiUw/MjuUeYiToAves71Gm8fwlQy/Ds95121UgXoSnDljPM0/EQuUfaivmZ1CXapI/z9lVdzgD4g75vA00rw+Snzu4rhJ7dL+T+gvObkoZJawr/b94IOTakPRi4rQU3hb8VHuHN+Ln5VCb6nnvC3Si0lKD1mhN+OtuLOP27bS7DV4XdyPCOnxmH4R2xbCQx/gZSPSqtpzAjPCTD8BcZeAsM/g7GWYEZ4PIzhn0HMZ+bWMOYYfm9jKYHhb+AsnxOsecwJ296Gv4GhlsDwI2pZ/xs0SoX/EMOPaiglMPyE1vkipdzhP8Lwk2qBb6mvBIafUW0lmBM2rww/o1pKYPgFtcBTypXA8CtQqgRzwv6E4VcgdwkMv0It4YuRUpdgTtiPMPwKpS5BF36ba0HqryUc9Y5dAsMfkNglMPwBilWCOWH72fAHaNMSGP4ItMAP9C/BnLDTaPgjsEMoQZ/wn2L4o7ID/Ijhb7Udlu8TzPA1f/QawnMB/iB8l97k8N/fgYu4w7fUO6UnEFFDeGTNOeBf4AXwpuiMJEmSJEmSJEmSJEmSJEmSJEmSEvofR88KRlXpBqgAAAAASUVORK5CYII=')
+        background-repeat: no-repeat
+        background-size: 100% auto
+
+.curly
+  $fontSize: 11rem
+  font-size: $fontSize
+  line-height: $fontSize
+  font-weight: 100
+  display: inline-block
+
+@media print
+  .container
+    width: auto
+    max-width: none
